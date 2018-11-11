@@ -3,7 +3,8 @@ package busquedabinaria;
 import java.util.Scanner;
 
 public class BusquedaBinaria {
-    //pinshi pp joto xd y ya
+    //pinshi pp joto xd y ya y jean gay 
+    
     public int buscarBinario(int []arreglo, int valor, int inferior, int superior){
         int centro;
         String msj,msj2;
