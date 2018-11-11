@@ -1,1 +1,8 @@
 
+public class cls_main {
+
+	public static void main(String[] args) {
+		
+    System.out.println("Puto el que lo lea :v");
+	}
+}
