@@ -1,0 +1,45 @@
+package busquedabinaria;
+
+import java.util.Scanner;
+
+public class BusquedaBinaria {
+    
+    public int buscarBinario(int []arreglo, int valor, int inferior, int superior){
+        int centro;
+        String msj,msj2;
+        if(inferior>superior)
+            return -1;
+        else{
+            centro=(inferior + superior)/2;
+            msj=String.format("Inferior: %1$d, Centro: %2$d, Superior %3$d", inferior, centro, superior);
+            msj2=String.format("Valores %1$d - %2$d - %3$d",arreglo[inferior], arreglo[centro], arreglo[superior]);
+            System.out.println(msj);
+            System.out.println(msj2);
+            if(arreglo[centro]== valor)
+                return centro;
+            else if(arreglo[centro]<valor)
+                return buscarBinario(arreglo, valor, centro+1, superior);
+            else
+                return buscarBinario(arreglo, valor, inferior, centro-1);
+        }
+    }
+    public static void main(String[] args) {
+        BusquedaBinaria b=new BusquedaBinaria();
+        int valores[]={0,1,2,3,5,8,13,21,34,55,89};
+        int objetivo;
+        int i;
+        
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Que numero deseas buscar? ");
+        objetivo=sc.nextInt();
+        i=b.buscarBinario(valores,objetivo, 0, valores.length-1);
+        
+        if(i>1)
+            System.out.println("Se encontro en la posicion: "+i);
+        else
+            System.out.println("No se encontro el numero");
+
+    }
+    
+}
