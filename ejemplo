@@ -3,6 +3,7 @@ package busquedabinaria;
 import java.util.Scanner;
 
 public class BusquedaBinaria {
+    //pinshi pp joto xd y ya y jean gay 
     
     public int buscarBinario(int []arreglo, int valor, int inferior, int superior){
         int centro;
@@ -28,6 +29,8 @@ public class BusquedaBinaria {
         int valores[]={0,1,2,3,5,8,13,21,34,55,89};
         int objetivo;
         int i;
+        
+        System.out.println("Test alv");
         
         Scanner sc=new Scanner(System.in);
         
